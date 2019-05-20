@@ -1,8 +1,8 @@
-version: 2.1
+jobs:
+        test:
+          override:
+            - mvn -o surefire:test
 
-test:
-  override:
-    - mvn package
 
-  post:
-    - mv target/*.war $CIRCLE_ARTIFACTS/
+       post:
+            - mv target/*.war $CIRCLE_ARTIFACTS/
